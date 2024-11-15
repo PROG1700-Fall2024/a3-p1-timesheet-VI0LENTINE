@@ -8,21 +8,15 @@
 
 
 # YOUR CODE STARTS HERE, each line must be indented (one tab)
-##########################################################################################################################################
-#Global variables
-
-days = [1, 2, 3, 4, 5]
-hrsDay = []
-
-##########################################################################################################################################
-#Define functions
 def hoursInput():
+    hrsDay = []
+    days = [1, 2, 3, 4, 5]
     for i in range(len(days)):
         hrs = int(input(f"Enter hours worked on day #{days[i]}: "))
         hrsDay.append(hrs)
-    return hrsDay
+    return hrsDay, days
 
-def calcHours(hrsDay):
+def calcHours(hrsDay, days):
     mostHrs = max(hrsDay)
     totalHrs = sum(hrsDay)
     dayIndex = hrsDay.index(mostHrs)
@@ -41,7 +35,7 @@ def calcHours(hrsDay):
     print(f"The average number of hours worked each day was: {averageHrs:.1f} ")
     print("------------------------------------------------------------------------------")
 
-def slackedOff():
+def slackedOff(hrsDay, days):
     print("Days you slacked off (i.e. worked less than 7 hours): ")
     for i in range(len(hrsDay)):
         slackHrs = hrsDay[i]
@@ -50,10 +44,9 @@ def slackedOff():
             print(f"Day #{day}: {slackHrs} hours")
      
 def main():
-    hoursInput()
-    calcHours(hrsDay) 
-    slackedOff()  
-
+    hrsDay, days = hoursInput()
+    calcHours(hrsDay, days) 
+    slackedOff(hrsDay, days)  
     # YOUR CODE ENDS HERE
 
 main()
