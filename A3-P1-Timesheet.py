@@ -4,7 +4,7 @@
 #               information calculated about those entries as output. 
 
 #Student #: W0516070     
-#Student Name: Valentine Byrnes 
+#Student Name: Valentine Byrnes  
 
 
 # YOUR CODE STARTS HERE, each line must be indented (one tab)
